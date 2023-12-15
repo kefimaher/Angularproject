@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./test.component.css']
 })
 export class TestComponent {
- title:string="Kefi Maher"; 
+  title:string ='e-commerce';
+  color='';
+
+  sayHello(){
+    alert('bonjour')
+  }
 }
