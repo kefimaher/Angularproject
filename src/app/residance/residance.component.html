@@ -7,14 +7,14 @@
 
 
   <div *ngIf="selectedResidence">
-    <h4>Apartments for {{ selectedResidence.name }}</h4>
+    <h4>Apartments for {{ selectedResidence?.name }}</h4>
     <div *ngIf="selectedResidence.apartments && selectedResidence.apartments.length > 0; else noApartments">
       <!-- Afficher la liste des appartements -->
       <div *ngFor="let apartment of selectedResidence.apartments">
         <!-- Afficher les détails de l'appartement -->
         <p>{{ apartment.description }}</p>
-        <!-- Ajouter le bouton "like" -->
-        <button (click)="addToFavorites(apartment)">Like</button>
+        <!-- Ajouter le bouton "like"
+       <button (click)="add(apartment)">Like</button>  -->
       </div>
     </div>
     <ng-template #noApartments>No Apartment found</ng-template>

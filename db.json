@@ -1,13 +1,22 @@
 {
-  "posts": [
+  "product": [
     {
       "id":1,
-      "title":"xxxxxxxx",
-      "price":1400,
+      "title":"produit 1",
+      "price":1350,
       "quantity":10,
       "like":"8",
       "description":"nice"
     }
+    "product": [
+      {
+        "id":2,
+        "title":"Produit 2",
+        "price":3000,
+        "quantity":3,
+        "like":"0",
+        "description":"BAD"
+      }
   ],
   "comments": [
     {

@@ -1,24 +1,27 @@
 import { Component } from '@angular/core';
 import { product } from '../core/models/product';
-
+import { ConsumerProductService } from '../services/consumer-product.service';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
-  styleUrls: ['./product.component.css']
+  styleUrls: ['./product.component.css'],
 })
 export class ProductComponent {
-  price!:number;
-listProducts:product[]=[
-  {id:1,title:'t-shirt 1',price:50,quantity:10,like:0,description:"test"},
-  {id:2,title:'t-shirt 2',price:30,quantity:5,like:0,description:""},
-  {id:3,title:'t-shirt 3',price:20,quantity:0,like:5,description:""}
-]
+  price!: number;
+  listProducts: any;
+  alert!:number;
+  constructor(private cons:ConsumerProductService) {}
+  ngOnInit() {
+    this.listProducts = this.cons.getProduct();
+  }
 
-increment(i:number){
-this.listProducts[i].like++;
-}
-buy(i:number){
-  this.listProducts[i].quantity--;
-
-}
+  increment(i: number) {
+    this.listProducts[i].like++;
+  }
+  buy(i: number) {
+    this.listProducts[i].quantity--;
+  }
+  /*getAlert(){
+    this.alert=this.Cs.getStat(this.listProducts,'quantity',0);
+  }*/
 }
