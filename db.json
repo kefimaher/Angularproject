@@ -1,0 +1,22 @@
+{
+  "posts": [
+    {
+      "id":1,
+      "title":"xxxxxxxx",
+      "price":1400,
+      "quantity":10,
+      "like":"8",
+      "description":"nice"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

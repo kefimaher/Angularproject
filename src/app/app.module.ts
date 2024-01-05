@@ -7,13 +7,15 @@ import { TestComponent } from './test/test.component';
 import { FormsModule } from '@angular/forms';
 import { ProductComponent } from './product/product.component';
 import { ResidenceComponent } from './residence/residence.component';
+import { ApartmentComponent } from './apartment/apartment.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
     ProductComponent,
-    ResidenceComponent
+    ResidenceComponent,
+    ApartmentComponent
   ],
   imports: [
     BrowserModule,

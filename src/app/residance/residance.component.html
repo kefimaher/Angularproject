@@ -1,1 +1,21 @@
-<p>residance works!</p>
+<div *ngFor="let residence of listResidences">
+    <h3>{{ residence.name }}</h3>
+    <p>{{ residence.address }}</p>
+    <img [src]="residence.image" alt="{{ residence.name }}" />
+    <button (click)="showApartments(residence)">Show Apartments</button>
+  </div>
+
+
+  <div *ngIf="selectedResidence">
+    <h4>Apartments for {{ selectedResidence.name }}</h4>
+    <div *ngIf="selectedResidence.apartments && selectedResidence.apartments.length > 0; else noApartments">
+      <!-- Afficher la liste des appartements -->
+      <div *ngFor="let apartment of selectedResidence.apartments">
+        <!-- Afficher les détails de l'appartement -->
+        <p>{{ apartment.description }}</p>
+        <!-- Ajouter le bouton "like" -->
+        <button (click)="addToFavorites(apartment)">Like</button>
+      </div>
+    </div>
+    <ng-template #noApartments>No Apartment found</ng-template>
+  </div>
