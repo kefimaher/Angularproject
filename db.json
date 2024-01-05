@@ -7,9 +7,8 @@
       "quantity":10,
       "like":"8",
       "description":"nice"
-    }
-    "product": [
-      {
+    },
+    {
         "id":2,
         "title":"Produit 2",
         "price":3000,
